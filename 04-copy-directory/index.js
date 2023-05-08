@@ -14,10 +14,10 @@ function copyDir() {
             let path2 = path.join(pathCopy, elem.name);
         
             {fs.copyFile(path1, path2, (error) => {
-                if (error) throw err;
+                if (error) throw error;
               });
             }}
-    }).catch(error=> console.log('Directory ist'));
+    }).catch(error=> console.log('Directory not found'));
     });
   };
 
